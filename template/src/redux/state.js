@@ -1,3 +1,6 @@
+import homePage from "./states/homePage";
+
 export default {
-  homePage: { data: "test" },
+  homePage,
+  someOtherpage: { data: "test2" }
 };
