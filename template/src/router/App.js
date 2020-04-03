@@ -3,11 +3,21 @@ import { Router as BrowserRouter, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import routes from "./routes/index";
 import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+
+import * as actionsHomepage from "../redux/actions/homePage";
 /// .env
 const appUrl = process.env.REACT_APP_CONSTANT;
 const newHistory = createBrowserHistory();
 
 class App extends React.Component {
+  componentDidMount() {
+    this.props.actions.getInitialState();
+  }
+  componentDidCatch(err, errorInfo) {
+    return window.alert(err);
+  }
+
   render() {
     return (
       <>
@@ -37,5 +47,10 @@ const mapStateToProps = state => {
     pageNotFound: "404"
   };
 };
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators(actionsHomepage, dispatch)
+  };
+};
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
