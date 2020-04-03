@@ -12,7 +12,7 @@ const newHistory = createBrowserHistory();
 
 class App extends React.Component {
   componentDidMount() {
-    this.props.actions.getInitialState();
+    this.props.actions.getInitialState(" Nikola");
   }
   componentDidCatch(err, errorInfo) {
     return window.alert(err);
