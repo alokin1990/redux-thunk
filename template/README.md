@@ -1,4 +1,9 @@
-#This is template app containing the next packages
+## Usage 
+``` 
+npx create-react-app myAppName --template redux-thunk 
+```
+
+## This is template app containing the next packages
 
     - "node-sass": "^4.13.1",
     - "prettier": "^2.0.2",
