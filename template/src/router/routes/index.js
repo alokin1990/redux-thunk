@@ -7,19 +7,19 @@ export default [
     path: ["/"],
     component: HomePage,
     state: "homePage",
-    exact: true,
+    exact: true
   },
   {
     type: Route,
     path: ["/second"],
     component: HomePage,
     state: "homePage",
-    exact: true,
+    exact: true
   },
   {
     type: Route,
     component: HomePage,
     state: "pageNotFound",
-    exact: true,
-  },
+    exact: true
+  }
 ];

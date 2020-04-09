@@ -12,7 +12,7 @@ const newHistory = createBrowserHistory();
 
 class App extends React.Component {
   componentDidMount() {
-    this.props.actions.getInitialState(" Nikola");
+    this.props.actions.getInitialState();
   }
   componentDidCatch(err, errorInfo) {
     return window.alert(err);
@@ -29,7 +29,10 @@ class App extends React.Component {
                 exact={route.exact}
                 path={route.path}
                 component={() => (
-                  <route.component props={this.props[route.state]} />
+                  <route.component
+                    props={this.props[route.state]}
+                    getNewState={this.props.actions.getNewState}
+                  />
                 )}
                 location={route.location}
               />
