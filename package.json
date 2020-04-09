@@ -1,5 +1,5 @@
 {
-  "name": "cra-template-redux-router",
+  "name": "cra-template-redux-thunk",
   "version": "1.0.0",
   "keywords": [
     "react",
