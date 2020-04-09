@@ -8,6 +8,8 @@
 
 #template 
 /template/node_modules
+/template/package.json
+
 
 # testing
 /coverage
