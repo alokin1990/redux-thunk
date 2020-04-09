@@ -12,7 +12,7 @@
     - "redux-thunk": "^2.3.0"
 
 ## The structure is the next 
-
+```
 .
 ├── gitignore
 ├── package.json
@@ -46,10 +46,11 @@
     ├── serviceWorker.js
     └── setupTests.js
 
-
+```
 ## Run npm i && npm start to start using it
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ### Deployment
 
